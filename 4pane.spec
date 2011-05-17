@@ -35,6 +35,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_desktopdir}
+mv $RPM_BUILD_ROOT{%{_datadir}/4Pane/rc/4Pane.desktop,%{_desktopdir}}
 %{find_lang} 4Pane
 
 %clean
@@ -44,4 +46,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
 %doc %{_docdir}/4Pane
+%{_desktopdir}/4Pane.desktop
 %{_datadir}/4Pane
