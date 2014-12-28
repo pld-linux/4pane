@@ -8,7 +8,7 @@ Group:		X11/Applications
 Source0:	http://downloads.sourceforge.net/project/fourpane/%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	5152105f7c148b8a465cf85534227fb7
 URL:		http://www.4pane.co.uk/index.html
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	wxGTK2-unicode-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
